@@ -1,23 +1,24 @@
 import { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import { TasksDispatchContext } from "../../hooks/TaskContext";
+import { TasksContext } from "../../hooks/TaskContext";
 
 import styles from "./input.module.css";
 
 const Input = () => {
   const [text, setText] = useState("");
-  const dispatch = useContext(TasksDispatchContext);
+  const { dispatch } = useContext(TasksContext);
 
   function handleSubmit(e) {
     e.preventDefault();
     setText("");
     dispatch({
-      type: "added",
+      type: "ADD",
       id: uuidv4(),
       text: text,
     });
   }
+
   return (
     <form
       action=""

@@ -1,7 +1,7 @@
 import Header from "./components/header/header.jsx";
-import Footer from "./components/footer/footer.jsx";
 import Input from "./components/input/input.jsx";
 import Todo from "./components/todo/todo.jsx";
+import Footer from "./components/footer/footer.jsx";
 
 function App() {
   return (
